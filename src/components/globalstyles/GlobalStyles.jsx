@@ -8,6 +8,7 @@ import { createGlobalStyle } from "styled-components";
  }
 body{
     font-size: 1.5rem;
+    background-color: #bebe;
 }
  
  

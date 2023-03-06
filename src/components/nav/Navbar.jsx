@@ -1,23 +1,24 @@
 import { Link } from "react-router-dom"
+import { Brand, Menu, Nav } from "./Navbar.styled"
 
 
 const Navbar = () => {
   return (
-    <div>
+    <Nav justify="space-between">
 
-      <Link to="/">
+      <Brand to="/">
       <i>{"Hümeyra"}</i>
       <span>Recipe</span>
-      </Link>
+      </Brand>
 
-      <ul>
+      <Menu>
         <Link to="/">Home</Link>
         <Link to="about">About</Link>
         <Link to="register">Register</Link>
         <Link to="logout">Logout</Link>
-      </ul>
-      
-    </div>
+      </Menu>
+
+    </Nav>
   )
 }
 
