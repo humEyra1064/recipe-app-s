@@ -1,7 +1,9 @@
+import AppRouter from "./router/AppRouter";
+
 const App = () => {
   return (
     <>
-      <h1>Styled Components</h1>
+    <AppRouter/>
     </>
   );
 };
