@@ -7,7 +7,7 @@ logoColor:"#393e46"
 
     },
     screens:{
-
+     lg:"920px"
 
 
     }
