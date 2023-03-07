@@ -14,7 +14,13 @@ const Home = () => {
 
   const getData = async()=>{
     const {data} = await axios(url)
+    console.log(data)
   }
+
+  useEffect(() => {
+  getData()
+  }, [])
+  
   return (
     <div>
       
