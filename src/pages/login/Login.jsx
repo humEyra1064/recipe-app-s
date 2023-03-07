@@ -1,20 +1,39 @@
+import { useNavigate } from "react-router-dom"
 import meal from "../../assets/meal.svg"
-import { FormContainer, LoginContainer } from "./Login.styled"
+import { FormContainer, Header, LoginContainer, StyledButton, StyledForm, StyledImg, StyledInput } from "./Login.styled"
 
 const Login = () => {
+   const navigate = useNavigate()
+  const userInfo ={
+    username:"admin"
+  }
+
+  const handleSubmit =(e)=>{
+   e.preventDefault()
+   sessionStorage.setItem("a",JSON.stringify(userInfo))
+   navigate(-1)
+  }
   return (
     <LoginContainer>
       <FormContainer>
-        <img src={meal} width={250} />
-        <h1>Recipe</h1>
-        <form action="">
-          <input type="text" placeholder="Enter username" />
-          <input type="text"
+
+        <StyledImg src={meal} width={250} />
+        <Header>Recipe</Header>
+
+
+        <StyledForm onClick={handleSubmit}>
+
+          <StyledInput type="text" placeholder="Enter username" />
+
+          <StyledInput type="text"
           placeholder="Enter password" />
-          <button type="submit">Llogin</button>
-        </form>
+
+          <StyledButton type="submit">Login</StyledButton>
+
+
+        </StyledForm>
       </FormContainer>
-    </Login>
+    </LoginContainer>
   )
 }
 
